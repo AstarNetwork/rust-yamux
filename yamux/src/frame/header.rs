@@ -298,7 +298,7 @@ impl StreamId {
     }
 
     pub fn is_server(self) -> bool {
-        self.0.is_multiple_of(2)
+        self.0 % 2 == 0
     }
 
     pub fn is_client(self) -> bool {
